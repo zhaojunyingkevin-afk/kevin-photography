@@ -1,0 +1,1617 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, initial-scale=1, viewport-fit=cover">
+<title>赵峻迎 Kevin Photography</title>
+<style>
+:root{
+  --paper:#f3efe7;
+  --paper-2:#ebe5dc;
+  --ink:#151513;
+  --muted:#6f6b64;
+  --soft:#fffaf2;
+  --line:rgba(21,21,19,.12);
+  --green:#3d5d4d;
+  --green-dark:#21372f;
+  --clay:#c88964;
+  --shadow:0 28px 80px rgba(39,32,24,.16);
+  --pad:clamp(20px,5vw,76px);
+  --font-sans:Inter,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",Arial,sans-serif;
+  --font-display:"Trebuchet MS","Segoe UI Variable Display","Aptos Display","PingFang SC","Microsoft YaHei UI","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC",Arial,sans-serif;
+  --font-heading-cn:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC","Source Han Sans SC","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 78% 10%,rgba(255,250,242,.96) 0 18%,rgba(255,250,242,0) 38%),
+    radial-gradient(circle at 8% 34%,rgba(200,137,100,.16) 0 18%,rgba(200,137,100,0) 38%),
+    radial-gradient(circle at 70% 72%,rgba(61,93,77,.14) 0 16%,rgba(61,93,77,0) 40%),
+    linear-gradient(180deg,#eee8df 0%,#f6f0e7 44%,#e9e1d7 100%);
+  color:var(--ink);
+  font-family:var(--font-sans);
+  overflow-x:hidden;
+}
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.1;
+  background:
+    repeating-linear-gradient(90deg,rgba(21,21,19,.08) 0 1px,transparent 1px 9px),
+    repeating-linear-gradient(0deg,rgba(21,21,19,.06) 0 1px,transparent 1px 11px);
+  mix-blend-mode:multiply;
+}
+button,a{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%;height:auto}
+.topbar{
+  position:fixed;
+  left:50%;
+  top:18px;
+  z-index:30;
+  width:min(94vw,880px);
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 10px 8px 16px;
+  border:1px solid rgba(255,255,255,.72);
+  border-radius:999px;
+  background:rgba(255,250,242,.72);
+  box-shadow:0 12px 34px rgba(40,32,24,.12);
+  backdrop-filter:blur(18px);
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  flex:1 1 auto;
+  height:42px;
+  min-width:0;
+  font-size:13px;
+  font-weight:680;
+  letter-spacing:.02em;
+}
+.brand-text{
+  font-family:var(--font-sans);
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.mark{
+  width:auto;
+  flex:0 0 auto;
+  font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif;
+  font-size:20px;
+  line-height:1;
+}
+.navlinks{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:4px;
+  flex:0 0 auto;
+  min-width:0;
+}
+.navlinks a,.lang-option{
+  height:42px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 16px;
+  border-radius:999px;
+  border:0;
+  background:transparent;
+  color:#383530;
+  font-size:14px;
+  line-height:1;
+  white-space:nowrap;
+}
+.navlinks a:hover,.lang-option:hover{background:rgba(33,55,47,.08)}
+.language-switcher{
+  height:42px;
+  display:flex;
+  align-items:center;
+  gap:2px;
+  padding:3px;
+  border:1px solid rgba(21,21,19,.1);
+  border-radius:999px;
+  background:rgba(255,250,242,.48);
+}
+.language-label{
+  padding:0 8px 0 10px;
+  color:var(--muted);
+  font-size:12px;
+}
+.lang-option{
+  min-width:38px;
+  border:0;
+  background:transparent;
+  font-size:12px;
+  padding:0 10px;
+}
+.lang-option.active{
+  background:var(--ink);
+  color:var(--soft);
+}
+.book{
+  background:var(--ink)!important;
+  color:var(--soft)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+  min-width:58px;
+}
+.hero{
+  position:relative;
+  min-height:96svh;
+  display:grid;
+  grid-template-columns:minmax(280px,.72fr) minmax(520px,1.28fr);
+  align-items:center;
+  gap:clamp(18px,3.6vw,54px);
+  padding:92px var(--pad) 40px;
+  overflow:hidden;
+}
+.hero-copy{position:relative;z-index:3;max-width:680px;min-width:0}
+.eyebrow,.section-kicker,.mini{
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:rgba(255,250,242,.62);
+  color:var(--green-dark);
+}
+.eyebrow:before{
+  content:"";
+  width:7px;
+  aspect-ratio:1;
+  border-radius:50%;
+  background:var(--clay);
+}
+h1,h2,h3{
+  margin:0;
+  font-family:var(--font-display);
+  font-weight:680;
+  letter-spacing:-.01em;
+}
+h1{
+  margin-top:20px;
+  font-size:clamp(48px,6.6vw,104px);
+  line-height:.96;
+  font-weight:720;
+  letter-spacing:-.018em;
+}
+.hero-copy p{
+  width:min(500px,100%);
+  margin:22px 0 0;
+  color:var(--muted);
+  font-size:clamp(16px,1.35vw,20px);
+  line-height:1.72;
+}
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:12px;
+  margin-top:28px;
+}
+.button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:52px;
+  padding:0 22px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:rgba(255,250,242,.8);
+  box-shadow:0 14px 35px rgba(38,32,24,.1);
+  font-weight:700;
+}
+.button.primary{
+  border-color:transparent;
+  background:var(--ink);
+  color:var(--soft);
+}
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:30px;
+  max-width:500px;
+}
+.stat{
+  padding:16px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:rgba(255,250,242,.52);
+}
+.stat strong{
+  display:block;
+  font-family:var(--font-display);
+  font-size:28px;
+  line-height:1;
+}
+.stat span{
+  display:block;
+  margin-top:8px;
+  color:var(--muted);
+  font-size:12px;
+}
+.hero-stage{
+  position:relative;
+  z-index:2;
+  min-width:0;
+  min-height:610px;
+  display:grid;
+  place-items:center;
+  perspective:1200px;
+}
+.orbit-wrap{
+  position:relative;
+  width:min(69vw,820px);
+  height:clamp(430px,52vw,640px);
+  transform-style:preserve-3d;
+}
+.orbit-wrap:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:clamp(8px,2.4vw,34px);
+  z-index:0;
+  width:min(70%,540px);
+  height:clamp(50px,7.4vw,88px);
+  transform:translateX(-50%) rotateX(62deg);
+  border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(35,28,20,.32) 0%,rgba(35,28,20,.22) 34%,rgba(35,28,20,.09) 64%,rgba(35,28,20,0) 80%);
+  filter:blur(10px);
+  opacity:.94;
+  pointer-events:none;
+}
+.orbit-wrap:after{
+  content:"";
+  position:absolute;
+  right:3%;
+  top:2%;
+  z-index:0;
+  width:44%;
+  height:34%;
+  border-radius:50%;
+  background:radial-gradient(ellipse at center,rgba(255,250,242,.42),rgba(255,250,242,0) 68%);
+  pointer-events:none;
+}
+.orbit{
+  position:absolute;
+  inset:0;
+  margin:auto;
+  z-index:1;
+  transform-style:preserve-3d;
+  cursor:grab;
+  touch-action:pan-y;
+  user-select:none;
+  pointer-events:none;
+}
+.orbit.dragging .orbit-card{cursor:grabbing}
+.orbit img{-webkit-user-drag:none;user-select:none}
+.orbit-card{
+  --r:clamp(270px,34vw,500px);
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:clamp(174px,19.6vw,288px);
+  padding:7px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.7);
+  background:rgba(255,250,242,.78);
+  box-shadow:0 24px 65px rgba(36,30,23,.18);
+  overflow:hidden;
+  transform:translate(-50%,-50%) rotateY(var(--angle)) translateZ(var(--r));
+  backface-visibility:hidden;
+  will-change:transform;
+  pointer-events:auto;
+  cursor:grab;
+}
+.orbit-card.portrait{width:clamp(148px,16.5vw,234px)}
+.orbit-card button,.direction-card button,.archive-item button{
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:inherit;
+}
+.orbit-card .photo-mat,.orbit-card img,.orbit-card small{pointer-events:none}
+.photo-mat{
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:100%;
+  border-radius:7px;
+  overflow:hidden;
+  background:#efe9df;
+}
+.photo-mat img{width:100%;height:auto}
+.orbit-card .photo-mat img{
+  transform:translateZ(.01px);
+  backface-visibility:hidden;
+  will-change:transform;
+}
+.orbit-card small,.direction-card figcaption,.archive-item figcaption{
+  position:absolute;
+  left:10px;
+  bottom:10px;
+  padding:6px 9px;
+  border-radius:999px;
+  background:rgba(21,21,19,.74);
+  color:var(--soft);
+  font-size:11px;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.orbit-card small{display:none}
+.direction-card .photo-mat small,.archive-item .photo-mat small{display:none}
+.scroll-note{
+  position:absolute;
+  left:var(--pad);
+  bottom:16px;
+  color:var(--muted);
+}
+.section{
+  position:relative;
+  padding:clamp(78px,10vw,132px) var(--pad);
+}
+.section-head{
+  display:grid;
+  grid-template-columns:minmax(160px,.44fr) minmax(300px,1fr);
+  gap:clamp(24px,6vw,86px);
+  align-items:end;
+  margin-bottom:44px;
+}
+.section-kicker{color:var(--green)}
+h2{
+  max-width:900px;
+  font-size:clamp(38px,5.35vw,82px);
+  line-height:1.08;
+  font-weight:660;
+  letter-spacing:0;
+}
+.section-head p{
+  max-width:610px;
+  margin:18px 0 0;
+  color:var(--muted);
+  line-height:1.75;
+  font-size:17px;
+}
+.featured{
+  background:
+    radial-gradient(circle at 18% 10%,rgba(255,250,242,.72),rgba(255,250,242,0) 34%),
+    linear-gradient(135deg,#e5ddd1 0%,#f8f2ea 45%,#d8d0c5 100%);
+  border-top:1px solid rgba(21,21,19,.08);
+  border-bottom:1px solid rgba(21,21,19,.08);
+}
+.direction-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  align-items:stretch;
+}
+.direction-card{
+  min-height:420px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:18px;
+  padding:12px;
+  border-radius:10px;
+  overflow:hidden;
+  background:rgba(255,250,242,.62);
+  border:1px solid rgba(255,255,255,.64);
+  box-shadow:0 24px 64px rgba(39,32,24,.12);
+  backdrop-filter:blur(12px);
+}
+.direction-card figure{
+  position:relative;
+  margin:0;
+  padding:8px;
+  border-radius:8px;
+  background:#f7f0e7;
+}
+.direction-card .photo-mat{
+  aspect-ratio:4 / 3;
+}
+.direction-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.direction-copy{padding:0 4px 8px}
+.direction-copy span{
+  color:var(--green);
+  font-weight:760;
+}
+.direction-copy h3{
+  margin-top:10px;
+  font-size:clamp(25px,2.4vw,38px);
+  line-height:1.08;
+}
+.direction-copy p{
+  margin:14px 0 0;
+  color:var(--muted);
+  line-height:1.64;
+}
+.direction-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  padding:0;
+  border:0;
+  background:transparent;
+  color:#15120f;
+  font-weight:760;
+  font-size:14px;
+  cursor:pointer;
+}
+.direction-link::after{content:"->";font-weight:720}
+.archive-filter{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:-18px 0 28px;
+}
+.archive-filter button{
+  min-height:38px;
+  padding:0 15px;
+  border:1px solid rgba(21,21,19,.14);
+  border-radius:999px;
+  background:rgba(255,250,242,.64);
+  color:rgba(21,21,19,.72);
+  font-weight:720;
+  cursor:pointer;
+}
+.archive-filter button.active{
+  background:#15120f;
+  color:var(--soft);
+  border-color:#15120f;
+}
+.archive-grid.filtered .archive-item[hidden]{display:none}
+.direction-card:hover img,.archive-item:hover img{transform:translateY(-2px)}
+.direction-card img,.archive-item img{transition:transform .28s ease}
+.services{
+  background:
+    linear-gradient(135deg,rgba(255,250,242,.08),rgba(255,250,242,0) 34%),
+    radial-gradient(circle at 86% 20%,rgba(200,137,100,.2),rgba(200,137,100,0) 34%),
+    var(--green-dark);
+  color:var(--soft);
+}
+.services .section-kicker,.services .section-head p{color:rgba(255,250,242,.66)}
+.process-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.process-step{
+  min-height:270px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:24px;
+  border:1px solid rgba(255,250,242,.16);
+  border-radius:8px;
+  background:rgba(255,250,242,.06);
+}
+.process-step h3{
+  font-size:clamp(28px,3vw,46px);
+  line-height:1;
+}
+.process-step p{
+  color:rgba(255,250,242,.68);
+  line-height:1.7;
+}
+.archive{
+  background:
+    radial-gradient(circle at 88% 8%,rgba(255,250,242,.82),rgba(255,250,242,0) 30%),
+    linear-gradient(180deg,var(--paper),#eee6dc);
+}
+.archive-grid{
+  columns:4 250px;
+  column-gap:16px;
+}
+.archive-item{
+  position:relative;
+  break-inside:avoid;
+  margin:0 0 16px;
+  padding:8px;
+  border-radius:8px;
+  overflow:hidden;
+  background:#f8f0e7;
+  box-shadow:0 12px 34px rgba(39,32,24,.08);
+}
+.archive-item .photo-mat{background:#e8dfd4}
+.about{
+  display:grid;
+  grid-template-columns:minmax(260px,.72fr) minmax(320px,1fr);
+  gap:clamp(28px,7vw,98px);
+  align-items:center;
+  background:#fbf6ed;
+}
+.about-media{
+  padding:10px;
+  border-radius:12px;
+  overflow:hidden;
+  background:#f7f0e7;
+  box-shadow:var(--shadow);
+}
+.profile-photo{margin:0}
+.about-media .photo-mat{border-radius:8px}
+.about-copy .lead{
+  margin:24px 0;
+  font-family:var(--font-display);
+  font-weight:520;
+  font-size:clamp(24px,3vw,40px);
+  line-height:1.28;
+}
+.about-copy p{
+  color:var(--muted);
+  line-height:1.8;
+}
+.contact{
+  min-height:62svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding-top:clamp(68px,7vw,96px);
+  padding-bottom:clamp(54px,6vw,82px);
+  background:var(--clay);
+  color:#15120f;
+}
+.contact > div{width:100%}
+.contact h2{
+  max-width:1050px;
+  font-size:clamp(42px,4.8vw,74px);
+}
+.contact-row{
+  display:grid;
+  grid-template-columns:minmax(420px,1fr) minmax(340px,460px);
+  align-items:center;
+  gap:clamp(34px,6vw,92px);
+  margin-top:30px;
+}
+.contact-copy{
+  display:grid;
+  justify-items:start;
+  gap:20px;
+}
+.contact-link{
+  display:inline-flex;
+  align-items:center;
+  min-height:56px;
+  padding:0 22px;
+  border-radius:999px;
+  background:#15120f;
+  color:var(--soft);
+  font-weight:760;
+}
+.wechat-qr{
+  justify-self:end;
+  width:min(34vw,430px);
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+.wechat-qr img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:12px;
+  mix-blend-mode:multiply;
+  opacity:.94;
+  filter:contrast(1.06);
+}
+.wechat-qr figcaption{
+  margin-top:14px;
+  font-size:13px;
+  color:rgba(21,18,15,.68);
+  text-align:center;
+  font-weight:720;
+}
+.contact-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  color:rgba(21,18,15,.66);
+  font-weight:720;
+}
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:80;
+  display:none;
+  height:100svh;
+  background:rgba(4,4,4,.96);
+  color:#f8f5ee;
+  overflow:hidden;
+}
+.lightbox.open{display:block}
+.lightbox-top,.lightbox-bottom{
+  position:absolute;
+  left:18px;
+  right:18px;
+  z-index:4;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  pointer-events:none;
+}
+.lightbox-top{top:18px}
+.lightbox-bottom{bottom:18px}
+.lightbox-top button,.lightbox-bottom button{pointer-events:auto}
+.lightbox-close{pointer-events:auto}
+.lightbox-title,.lightbox-count{
+  text-shadow:0 2px 18px rgba(0,0,0,.72);
+}
+.lightbox-title{
+  display:grid;
+  gap:3px;
+  min-width:0;
+}
+.lightbox-title strong{
+  font-family:var(--font-display);
+  font-size:20px;
+}
+.lightbox-title span,.lightbox-count{
+  color:rgba(248,245,238,.62);
+  font-size:13px;
+}
+.lightbox-close,.lightbox-arrow{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(248,245,238,.18);
+  border-radius:50%;
+  background:rgba(248,245,238,.08);
+  color:#f8f5ee;
+  font-size:24px;
+}
+.lightbox-stage{
+  position:absolute;
+  inset:0;
+  padding:72px 72px 54px;
+  display:grid;
+  grid-template-columns:1fr;
+  place-items:center;
+  align-items:center;
+  overflow:hidden;
+}
+.lightbox-image-wrap{
+  width:100%;
+  height:100%;
+  min-width:0;
+  min-height:0;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.lightbox img{
+  max-width:none;
+  max-height:none;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  transform:translateZ(0);
+}
+.lightbox-arrow{
+  position:absolute;
+  top:50%;
+  z-index:2;
+  transform:translateY(-50%);
+}
+.lightbox-prev{left:0}
+.lightbox-next{right:0}
+body.lightbox-lock{overflow:hidden}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .direction-card img,.archive-item img{transition:none}
+}
+@media(max-width:1700px) and (min-width:981px){
+  .topbar{width:min(94vw,1100px)}
+  .hero{
+    grid-template-columns:minmax(470px,.86fr) minmax(430px,1fr);
+    gap:clamp(20px,2.4vw,36px);
+  }
+  .hero-copy{max-width:590px}
+  h1{
+    font-size:clamp(64px,5.6vw,86px);
+    line-height:1.02;
+    letter-spacing:-.012em;
+  }
+  .hero-copy p{width:min(520px,100%)}
+  .hero-stage{
+    min-height:560px;
+    overflow:visible;
+  }
+  .orbit-wrap{
+    width:min(58vw,700px);
+    height:clamp(430px,44vw,560px);
+  }
+  .orbit-card{
+    --r:clamp(258px,28vw,405px);
+    width:clamp(168px,16.8vw,238px);
+  }
+  .orbit-card.portrait{width:clamp(142px,14vw,198px)}
+}
+@media(max-width:1580px) and (min-width:981px){
+  :root{--pad:clamp(34px,4vw,62px)}
+  .topbar{width:min(94vw,980px)}
+  .hero{
+    grid-template-columns:minmax(430px,.74fr) minmax(0,1fr);
+    gap:clamp(18px,2vw,30px);
+    padding-top:108px;
+  }
+  .hero-copy{max-width:520px}
+  h1{
+    font-size:clamp(58px,4.75vw,74px);
+    line-height:1.04;
+  }
+  .hero-copy p{
+    width:min(470px,100%);
+    font-size:clamp(16px,1.18vw,18px);
+  }
+  .hero-stats{max-width:470px}
+  .hero-stage{
+    min-height:520px;
+    transform:translateX(1.5vw);
+  }
+  .orbit-wrap{
+    width:min(54vw,640px);
+    height:clamp(410px,40vw,520px);
+  }
+  .orbit-card{
+    --r:clamp(230px,24vw,350px);
+    width:clamp(160px,14.7vw,220px);
+  }
+  .orbit-card.portrait{width:clamp(136px,12.6vw,182px)}
+}
+@media(max-width:980px){
+  .hero{grid-template-columns:1fr;padding-top:104px}
+  .hero-stage{min-height:560px}
+  .section-head{grid-template-columns:1fr}
+  .direction-grid{grid-template-columns:repeat(2,1fr)}
+  .process-list,.about{grid-template-columns:1fr}
+  .about-media{max-width:520px}
+}
+@media(max-width:680px){
+  .topbar{
+    width:calc(100vw - 24px);
+    padding-left:12px;
+    gap:6px;
+  }
+  .brand-text{max-width:34vw}
+  .navlinks a:not(.book){display:none}
+  .navlinks a{padding:0 14px}
+  .language-label{display:none}
+  .lang-option{min-width:34px;padding:0 8px}
+  .hero{min-height:auto;padding-bottom:44px}
+  h1{font-size:clamp(54px,18vw,82px)}
+  .hero-stats{grid-template-columns:1fr}
+  .hero-stage{min-height:390px;overflow:hidden}
+  .orbit-wrap{width:104vw;height:370px;transform:scale(.78)}
+  .orbit-card{--r:238px;width:178px}
+  .orbit-card.portrait{width:150px}
+  .direction-grid{grid-template-columns:1fr}
+  .direction-card{min-height:auto}
+  .contact-meta{display:grid}
+  .lightbox-top,.lightbox-bottom{left:12px;right:12px}
+  .lightbox-top{top:12px}
+  .lightbox-bottom{bottom:12px}
+  .lightbox-stage{padding:58px 12px 42px}
+  .lightbox-arrow{
+    width:38px;
+    height:38px;
+    font-size:22px;
+  }
+}
+/* Stable desktop composition: devices may scale the page, but core layout should not reflow. */
+html{
+  width:1920px!important;
+  min-width:1920px!important;
+  overflow-x:hidden!important;
+  -webkit-text-size-adjust:100%!important;
+  text-size-adjust:100%!important;
+}
+body{
+  width:1920px!important;
+  min-width:1920px!important;
+  overflow-x:hidden!important;
+}
+:root{--pad:76px!important}
+.topbar{
+  width:880px!important;
+  left:50%!important;
+  top:18px!important;
+  transform:translateX(-50%)!important;
+}
+.brand-text{max-width:none!important}
+.navlinks a:not(.book){display:inline-flex!important}
+.language-label{display:inline-flex!important}
+.lang-option{min-width:38px!important;padding:0 10px!important}
+.hero{
+  width:1920px!important;
+  min-width:1920px!important;
+  min-height:1000px!important;
+  display:grid!important;
+  grid-template-columns:minmax(280px,.72fr) minmax(520px,1.28fr)!important;
+  align-items:center!important;
+  gap:54px!important;
+  padding:116px 76px 58px!important;
+  overflow:hidden!important;
+}
+.hero-copy{max-width:680px!important;min-width:0!important}
+h1{
+  font-size:104px!important;
+  line-height:.96!important;
+  letter-spacing:-.018em!important;
+}
+.hero-copy p{
+  width:500px!important;
+  font-size:20px!important;
+  line-height:1.72!important;
+}
+.hero-stats{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  max-width:500px!important;
+}
+.hero-stage{
+  min-width:0!important;
+  min-height:610px!important;
+  overflow:visible!important;
+  transform:none!important;
+  perspective:1200px!important;
+}
+.orbit-wrap{
+  width:820px!important;
+  height:640px!important;
+  transform:none!important;
+}
+.orbit-card{
+  --r:500px!important;
+  width:288px!important;
+}
+.orbit-card.portrait{width:234px!important}
+.section{
+  width:1920px!important;
+  min-width:1920px!important;
+  padding-left:76px!important;
+  padding-right:76px!important;
+}
+.section-head{
+  grid-template-columns:minmax(160px,.44fr) minmax(300px,1fr)!important;
+}
+.direction-grid{
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:18px!important;
+}
+.process-list{
+  display:grid!important;
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:14px!important;
+}
+.process-step{
+  min-width:0!important;
+  min-height:270px!important;
+}
+.about{
+  display:grid!important;
+  grid-template-columns:minmax(260px,.72fr) minmax(320px,1fr)!important;
+}
+.about-media{max-width:none!important}
+.contact-meta{display:flex!important}
+</style>
+</head>
+<body>
+<header class="topbar" aria-label="Primary navigation">
+  <a class="brand" href="#top"><span class="mark" aria-hidden="true">📸</span><span class="brand-text">赵峻迎 / Kevin Photography</span></a>
+  <nav class="navlinks" aria-label="Page links">
+    <a href="#work" data-i18n="navWork">方向</a>
+    <a href="#services" data-i18n="navServices">流程</a>
+    <a href="#archive" data-i18n="navGallery">作品</a>
+    <a class="book" href="#contact" data-i18n="navBook">预约</a>
+  </nav>
+  <div class="language-switcher" aria-label="Language selector">
+    <span class="language-label">Language</span>
+    <button class="lang-option" type="button" data-lang="zh">中文</button>
+    <button class="lang-option" type="button" data-lang="en">EN</button>
+    <button class="lang-option" type="button" data-lang="de">DE</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-label="Photography portfolio hero">
+    <div class="hero-copy">
+      <div class="eyebrow" data-i18n="eyebrow">赵峻迎 / Kevin · Berlin / Shanghai</div>
+      <h1>Kevin Zhao<br>Photography</h1>
+      <p data-i18n="heroText">在德国本地为中国公司提供展会、活动、商业与产品拍摄，也可配合完成短视频内容交付。主要服务柏林、上海，德国其他城市可沟通。</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#contact" data-i18n="heroCta">联系拍摄</a>
+        <a class="button" href="#archive" data-i18n="heroSecondary">查看作品</a>
+      </div>
+      <div class="hero-stats" aria-label="Portfolio highlights">
+        <div class="stat"><strong>86</strong><span data-i18n="statPhotos">精选照片</span></div>
+        <div class="stat"><strong>3</strong><span data-i18n="statDirections">拍摄方向</span></div>
+        <div class="stat"><strong>BER/SHA</strong><span data-i18n="statCities">德国其他城市可沟通</span></div>
+      </div>
+    </div>
+
+    <div class="hero-stage" aria-label="Rotating photo showcase">
+      <div class="orbit-wrap">
+        <div class="orbit" id="orbit"></div>
+      </div>
+    </div>
+    <div class="scroll-note mini" data-i18n="scrollNote">Scroll for selected work</div>
+  </section>
+
+  <section class="section featured" id="work">
+    <div class="section-head">
+      <div class="section-kicker">01 / Shooting Directions</div>
+      <div>
+        <h2 data-i18n="workTitle">按拍摄需求看作品</h2>
+        <p data-i18n="workText">前面三类是主要接单方向：品牌内容、现场记录、产品与人物。作品墙再按看图习惯分成四类，方便快速筛选。</p>
+      </div>
+    </div>
+    <div class="direction-grid" id="directionGrid"></div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="section-head">
+      <div class="section-kicker">02 / Process</div>
+      <div>
+        <h2 data-i18n="servicesTitle">拍摄前后怎么配合</h2>
+        <p data-i18n="servicesText">来德国参展、开会或做品牌内容，通常需要先确认用途、现场重点和交付格式。流程清楚，后面宣传和复盘会更顺。</p>
+      </div>
+    </div>
+    <div class="process-list">
+      <article class="process-step">
+        <span class="mini">01 / Brief</span>
+        <h3 data-i18n="processBrief">确认用途</h3>
+        <p data-i18n="processBriefText">先确认展会或活动的时间、地点、重点人物、拍摄用途和交付格式。需要短视频素材也可以提前说明。</p>
+      </article>
+      <article class="process-step">
+        <span class="mini">02 / Shoot</span>
+        <h3 data-i18n="processShoot">现场拍摄</h3>
+        <p data-i18n="processShootText">现场优先记录展台、产品、交流、演讲和关键人物，同时保留可用于短视频剪辑的氛围画面。</p>
+      </article>
+      <article class="process-step">
+        <span class="mini">03 / Delivery</span>
+        <h3 data-i18n="processDelivery">精选交付</h3>
+        <p data-i18n="processDeliveryText">完成照片筛选、基础整理和统一调色后交付。短视频素材或成片可按项目需求另外整理。</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section archive" id="archive">
+    <div class="section-head">
+      <div class="section-kicker">03 / Archive</div>
+      <div>
+        <h2 data-i18n="archiveTitle">更多作品</h2>
+        <p data-i18n="archiveText">这里是更多作品，用来快速查看整体审美、色彩和不同场景的处理方式。后续新增作品会继续放到这里。</p>
+      </div>
+    </div>
+    <div class="archive-filter" id="archiveFilter" aria-label="Portfolio filters"></div>
+    <div class="archive-grid" id="archiveGrid"></div>
+  </section>
+
+  <section class="section about" id="about">
+    <div class="about-media" id="aboutMedia"></div>
+    <div class="about-copy">
+      <div class="section-kicker">04 / About</div>
+      <h2 data-i18n="aboutTitle">在德国本地拍摄，服务中国公司参展与活动</h2>
+      <p class="lead" data-i18n="aboutLead">我是赵峻迎，英文名 Kevin，目前在柏林工业大学攻读硕士，主要在德国和上海接拍摄。从接触摄影到现在已有 13 年，熟悉现场记录、城市环境和商业内容拍摄。</p>
+      <p data-i18n="aboutText">现在主要服务来德国参展、办活动或需要本地内容拍摄的中国公司。可提供商业摄影、产品拍摄、展会和活动记录，也可以配合交付短视频内容，用于官网、社交媒体、宣传材料和活动回顾。</p>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div>
+      <div class="section-kicker">05 / Contact</div>
+      <h2 data-i18n="contactTitle">需要拍摄可以联系我</h2>
+      <div class="contact-row">
+        <div class="contact-copy">
+          <a class="contact-link" href="mailto:2101972873@qq.com">2101972873@qq.com</a>
+          <div class="contact-meta">
+            <span data-i18n="contactWechat">微信：扫码添加</span>
+            <span data-i18n="contactArea">德国本地为主，柏林、上海可直接沟通</span>
+            <span>Photography / Short video / Exhibition / Event</span>
+          </div>
+        </div>
+        <figure class="wechat-qr">
+          <img src="assets/contact-wechat-kevin.png" width="1024" height="1024" alt="WeChat QR code" loading="lazy" decoding="async">
+          <figcaption data-i18n="contactWechatCaption">Kevin / 微信二维码</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo detail view">
+  <div class="lightbox-top">
+    <div class="lightbox-title">
+      <strong id="lightboxTitle">Frame 01</strong>
+      <span id="lightboxMeta">Architecture / Ingolstadt</span>
+    </div>
+    <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close">×</button>
+  </div>
+  <div class="lightbox-stage">
+    <button class="lightbox-arrow lightbox-prev" type="button" id="lightboxPrev" aria-label="Previous photo">‹</button>
+    <div class="lightbox-image-wrap" id="lightboxBackdrop">
+      <img id="lightboxImage" alt="">
+    </div>
+    <button class="lightbox-arrow lightbox-next" type="button" id="lightboxNext" aria-label="Next photo">›</button>
+  </div>
+  <div class="lightbox-bottom">
+    <span class="lightbox-count" id="lightboxCount">1 / 86</span>
+    <span class="lightbox-count" data-i18n="lightboxHint">ESC 关闭 / 方向键切换</span>
+  </div>
+</div>
+
+<script>
+const PHOTO_DATA = [{"id":"photo-53","title":"Frame 01","category":"CityEnvironment","location":"Shanghai","thumbnailSrc":"assets/thumbnails/photo-53.webp","displaySrc":"assets/display/photo-53.webp","originalSrc":"assets/display/photo-53.webp","width":1577,"height":888,"orientation":"landscape"},{"id":"photo-16","title":"Frame 02","category":"CityEnvironment","location":"Beijing","thumbnailSrc":"assets/thumbnails/photo-16.webp","displaySrc":"assets/display/photo-16.webp","originalSrc":"assets/display/photo-16.webp","width":11785,"height":7857,"orientation":"landscape"},{"id":"photo-24","title":"Frame 03","category":"CityEnvironment","location":"Potsdamer Platz","thumbnailSrc":"assets/thumbnails/photo-24.webp","displaySrc":"assets/display/photo-24.webp","originalSrc":"assets/display/photo-24.webp","width":1622,"height":913,"orientation":"landscape"},{"id":"photo-21","title":"Frame 04","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-21.webp","displaySrc":"assets/display/photo-21.webp","originalSrc":"assets/display/photo-21.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-11","title":"Frame 05","category":"CityEnvironment","location":"Munich","thumbnailSrc":"assets/thumbnails/photo-11.webp","displaySrc":"assets/display/photo-11.webp","originalSrc":"assets/display/photo-11.webp","width":1662,"height":935,"orientation":"landscape"},{"id":"photo-18","title":"Frame 06","category":"CityEnvironment","location":"Berlin","thumbnailSrc":"assets/thumbnails/photo-18.webp","displaySrc":"assets/display/photo-18.webp","originalSrc":"assets/display/photo-18.webp","width":1645,"height":926,"orientation":"landscape"},{"id":"photo-30","title":"Frame 07","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-30.webp","displaySrc":"assets/display/photo-30.webp","originalSrc":"assets/display/photo-30.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-23","title":"Frame 08","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-23.webp","displaySrc":"assets/display/photo-23.webp","originalSrc":"assets/display/photo-23.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-27","title":"Frame 09","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-27.webp","displaySrc":"assets/display/photo-27.webp","originalSrc":"assets/display/photo-27.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-28","title":"Frame 10","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-28.webp","displaySrc":"assets/display/photo-28.webp","originalSrc":"assets/display/photo-28.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-36","title":"Frame 11","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-36.webp","displaySrc":"assets/display/photo-36.webp","originalSrc":"assets/display/photo-36.webp","width":1024,"height":1365,"orientation":"portrait"},{"id":"photo-37","title":"Frame 12","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-37.webp","displaySrc":"assets/display/photo-37.webp","originalSrc":"assets/display/photo-37.webp","width":1024,"height":1536,"orientation":"portrait"},{"id":"photo-35","title":"Frame 13","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-35.webp","displaySrc":"assets/display/photo-35.webp","originalSrc":"assets/display/photo-35.webp","width":6000,"height":4000,"orientation":"landscape"},{"id":"photo-55","title":"Frame 14","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-55.webp","displaySrc":"assets/display/photo-55.webp","originalSrc":"assets/display/photo-55.webp","width":6000,"height":4000,"orientation":"landscape"},{"id":"photo-32","title":"Frame 15","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-32.webp","displaySrc":"assets/display/photo-32.webp","originalSrc":"assets/display/photo-32.webp","width":5184,"height":3456,"orientation":"landscape"},{"id":"photo-34","title":"Frame 16","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-34.webp","displaySrc":"assets/display/photo-34.webp","originalSrc":"assets/display/photo-34.webp","width":5184,"height":3456,"orientation":"landscape"},{"id":"photo-17","title":"Frame 17","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-17.webp","displaySrc":"assets/display/photo-17.webp","originalSrc":"assets/display/photo-17.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-45","title":"Frame 18","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-45.webp","displaySrc":"assets/display/photo-45.webp","originalSrc":"assets/display/photo-45.webp","width":1586,"height":992,"orientation":"landscape"},{"id":"photo-46","title":"Frame 19","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-46.webp","displaySrc":"assets/display/photo-46.webp","originalSrc":"assets/display/photo-46.webp","width":3488,"height":2325,"orientation":"landscape"},{"id":"photo-39","title":"Frame 20","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-39.webp","displaySrc":"assets/display/photo-39.webp","originalSrc":"assets/display/photo-39.webp","width":6000,"height":4000,"orientation":"landscape"},{"id":"photo-60","title":"Frame 21","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-60.webp","displaySrc":"assets/display/photo-60.webp","originalSrc":"assets/display/photo-60.webp","width":1536,"height":864,"orientation":"landscape"},{"id":"photo-56","title":"Frame 22","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-56.webp","displaySrc":"assets/display/photo-56.webp","originalSrc":"assets/display/photo-56.webp","width":1536,"height":864,"orientation":"landscape"},{"id":"photo-59","title":"Frame 23","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-59.webp","displaySrc":"assets/display/photo-59.webp","originalSrc":"assets/display/photo-59.webp","width":1448,"height":965,"orientation":"landscape"},{"id":"photo-57","title":"Frame 24","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-57.webp","displaySrc":"assets/display/photo-57.webp","originalSrc":"assets/display/photo-57.webp","width":1671,"height":941,"orientation":"landscape"},{"id":"photo-58","title":"Frame 25","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-58.webp","displaySrc":"assets/display/photo-58.webp","originalSrc":"assets/display/photo-58.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-47","title":"Frame 26","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-47.webp","displaySrc":"assets/display/photo-47.webp","originalSrc":"assets/display/photo-47.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-43","title":"Frame 27","category":"BrandScene","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-43.webp","displaySrc":"assets/display/photo-43.webp","originalSrc":"assets/display/photo-43.webp","width":4032,"height":2688,"orientation":"landscape"},{"id":"photo-42","title":"Frame 28","category":"BrandScene","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-42.webp","displaySrc":"assets/display/photo-42.webp","originalSrc":"assets/display/photo-42.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-48","title":"Frame 29","category":"CityEnvironment","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-48.webp","displaySrc":"assets/display/photo-48.webp","originalSrc":"assets/display/photo-48.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-49","title":"Frame 30","category":"CityEnvironment","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-49.webp","displaySrc":"assets/display/photo-49.webp","originalSrc":"assets/display/photo-49.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-50","title":"Frame 31","category":"CityEnvironment","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-50.webp","displaySrc":"assets/display/photo-50.webp","originalSrc":"assets/display/photo-50.webp","width":1648,"height":928,"orientation":"landscape"},{"id":"photo-51","title":"Frame 32","category":"CityEnvironment","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-51.webp","displaySrc":"assets/display/photo-51.webp","originalSrc":"assets/display/photo-51.webp","width":1535,"height":863,"orientation":"landscape"},{"id":"photo-44","title":"Frame 33","category":"CityEnvironment","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-44.webp","displaySrc":"assets/display/photo-44.webp","originalSrc":"assets/display/photo-44.webp","width":6000,"height":4000,"orientation":"landscape"},{"id":"photo-40","title":"Frame 34","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-40.webp","displaySrc":"assets/display/photo-40.webp","originalSrc":"assets/display/photo-40.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-52","title":"Frame 35","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-52.webp","displaySrc":"assets/display/photo-52.webp","originalSrc":"assets/display/photo-52.webp","width":8377,"height":4712,"orientation":"landscape"},{"id":"photo-26","title":"Frame 36","category":"CityEnvironment","location":"","thumbnailSrc":"assets/thumbnails/photo-26.webp","displaySrc":"assets/display/photo-26.webp","originalSrc":"assets/display/photo-26.webp","width":1600,"height":901,"orientation":"landscape"},{"id":"photo-08","title":"Frame 37","category":"CityEnvironment","location":"Taizhou","thumbnailSrc":"assets/thumbnails/photo-08.webp","displaySrc":"assets/display/photo-08.webp","originalSrc":"assets/display/photo-08.webp","width":1622,"height":913,"orientation":"landscape"},{"id":"photo-09","title":"Frame 38","category":"CityEnvironment","location":"Taizhou","thumbnailSrc":"assets/thumbnails/photo-09.webp","displaySrc":"assets/display/photo-09.webp","originalSrc":"assets/display/photo-09.webp","width":1629,"height":917,"orientation":"landscape"},{"id":"photo-38","title":"Frame 39","category":"CityEnvironment","location":"Berlin","thumbnailSrc":"assets/thumbnails/photo-38.webp","displaySrc":"assets/display/photo-38.webp","originalSrc":"assets/display/photo-38.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-13","title":"Frame 40","category":"CityEnvironment","location":"Munich","thumbnailSrc":"assets/thumbnails/photo-13.webp","displaySrc":"assets/display/photo-13.webp","originalSrc":"assets/display/photo-13.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-15","title":"Frame 41","category":"CityEnvironment","location":"Munich","thumbnailSrc":"assets/thumbnails/photo-15.webp","displaySrc":"assets/display/photo-15.webp","originalSrc":"assets/display/photo-15.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-14","title":"Frame 42","category":"CityEnvironment","location":"Munich","thumbnailSrc":"assets/thumbnails/photo-14.webp","displaySrc":"assets/display/photo-14.webp","originalSrc":"assets/display/photo-14.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-12","title":"Frame 43","category":"CityEnvironment","location":"Munich","thumbnailSrc":"assets/thumbnails/photo-12.webp","displaySrc":"assets/display/photo-12.webp","originalSrc":"assets/display/photo-12.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-25","title":"Frame 44","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-25.webp","displaySrc":"assets/display/photo-25.webp","originalSrc":"assets/display/photo-25.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-22","title":"Frame 45","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-22.webp","displaySrc":"assets/display/photo-22.webp","originalSrc":"assets/display/photo-22.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-19","title":"Frame 46","category":"CityEnvironment","location":"Berlin","thumbnailSrc":"assets/thumbnails/photo-19.webp","displaySrc":"assets/display/photo-19.webp","originalSrc":"assets/display/photo-19.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-20","title":"Frame 47","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-20.webp","displaySrc":"assets/display/photo-20.webp","originalSrc":"assets/display/photo-20.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-41","title":"Frame 48","category":"CityEnvironment","location":"Hamburg","thumbnailSrc":"assets/thumbnails/photo-41.webp","displaySrc":"assets/display/photo-41.webp","originalSrc":"assets/display/photo-41.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-31","title":"Frame 49","category":"CityEnvironment","location":"Berlin","thumbnailSrc":"assets/thumbnails/photo-31.webp","displaySrc":"assets/display/photo-31.webp","originalSrc":"assets/display/photo-31.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-03","title":"Frame 50","category":"CityEnvironment","location":"Bremen","thumbnailSrc":"assets/thumbnails/photo-03.webp","displaySrc":"assets/display/photo-03.webp","originalSrc":"assets/display/photo-03.webp","width":1535,"height":1024,"orientation":"landscape"},{"id":"photo-01","title":"Frame 51","category":"CityEnvironment","location":"Ingolstadt","thumbnailSrc":"assets/thumbnails/photo-01.webp","displaySrc":"assets/display/photo-01.webp","originalSrc":"assets/display/photo-01.webp","width":1662,"height":935,"orientation":"landscape"},{"id":"photo-02","title":"Frame 52","category":"CityEnvironment","location":"Ingolstadt","thumbnailSrc":"assets/thumbnails/photo-02.webp","displaySrc":"assets/display/photo-02.webp","originalSrc":"assets/display/photo-02.webp","width":1660,"height":947,"orientation":"landscape"},{"id":"photo-04","title":"Frame 53","category":"CityEnvironment","location":"Landshut","thumbnailSrc":"assets/thumbnails/photo-04.webp","displaySrc":"assets/display/photo-04.webp","originalSrc":"assets/display/photo-04.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-07","title":"Frame 54","category":"CityEnvironment","location":"Beijing","thumbnailSrc":"assets/thumbnails/photo-07.webp","displaySrc":"assets/display/photo-07.webp","originalSrc":"assets/display/photo-07.webp","width":1086,"height":1448,"orientation":"portrait"},{"id":"photo-05","title":"Frame 55","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-05.webp","displaySrc":"assets/display/photo-05.webp","originalSrc":"assets/display/photo-05.webp","width":1575,"height":998,"orientation":"landscape"},{"id":"photo-10","title":"Frame 56","category":"CityEnvironment","location":"Harbin","thumbnailSrc":"assets/thumbnails/photo-10.webp","displaySrc":"assets/display/photo-10.webp","originalSrc":"assets/display/photo-10.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-54","title":"Frame 57","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-54.webp","displaySrc":"assets/display/photo-54.webp","originalSrc":"assets/display/photo-54.webp","width":3456,"height":5184,"orientation":"portrait"},{"id":"photo-33","title":"Frame 58","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-33.webp","displaySrc":"assets/display/photo-33.webp","originalSrc":"assets/display/photo-33.webp","width":5184,"height":3456,"orientation":"landscape"},{"id":"photo-06","title":"Frame 59","category":"BrandScene","location":"","thumbnailSrc":"assets/thumbnails/photo-06.webp","displaySrc":"assets/display/photo-06.webp","originalSrc":"assets/display/photo-06.webp","width":8377,"height":4712,"orientation":"landscape"},{"id":"photo-061","title":"Frame 60","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-061.webp","displaySrc":"assets/display/photo-061.webp","originalSrc":"assets/display/photo-061.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-062","title":"Frame 61","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-062.webp","displaySrc":"assets/display/photo-062.webp","originalSrc":"assets/display/photo-062.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-063","title":"Frame 62","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-063.webp","displaySrc":"assets/display/photo-063.webp","originalSrc":"assets/display/photo-063.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-064","title":"Frame 63","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-064.webp","displaySrc":"assets/display/photo-064.webp","originalSrc":"assets/display/photo-064.webp","width":6000,"height":4000,"orientation":"landscape"},{"id":"photo-065","title":"Frame 64","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-065.webp","displaySrc":"assets/display/photo-065.webp","originalSrc":"assets/display/photo-065.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-066","title":"Frame 65","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-066.webp","displaySrc":"assets/display/photo-066.webp","originalSrc":"assets/display/photo-066.webp","width":2133,"height":3793,"orientation":"portrait"},{"id":"photo-067","title":"Frame 66","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-067.webp","displaySrc":"assets/display/photo-067.webp","originalSrc":"assets/display/photo-067.webp","width":2731,"height":4096,"orientation":"portrait"},{"id":"photo-068","title":"Frame 67","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-068.webp","displaySrc":"assets/display/photo-068.webp","originalSrc":"assets/display/photo-068.webp","width":2624,"height":3487,"orientation":"portrait"},{"id":"photo-069","title":"Frame 68","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-069.webp","displaySrc":"assets/display/photo-069.webp","originalSrc":"assets/display/photo-069.webp","width":5184,"height":3456,"orientation":"landscape"},{"id":"photo-070","title":"Frame 69","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-070.webp","displaySrc":"assets/display/photo-070.webp","originalSrc":"assets/display/photo-070.webp","width":5120,"height":3413,"orientation":"landscape"},{"id":"photo-071","title":"Frame 70","category":"PortraitImage","location":"Tibet","thumbnailSrc":"assets/thumbnails/photo-071.webp","displaySrc":"assets/display/photo-071.webp","originalSrc":"assets/display/photo-071.webp","width":1599,"height":900,"orientation":"landscape"},{"id":"photo-072","title":"Frame 71","category":"CityEnvironment","location":"Berlin","thumbnailSrc":"assets/thumbnails/photo-072.webp","displaySrc":"assets/display/photo-072.webp","originalSrc":"assets/display/photo-072.webp","width":5732,"height":3821,"orientation":"landscape"},{"id":"photo-073","title":"Frame 72","category":"CityEnvironment","location":"Dessau","thumbnailSrc":"assets/thumbnails/photo-073.webp","displaySrc":"assets/display/photo-073.webp","originalSrc":"assets/display/photo-073.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-074","title":"Frame 73","category":"CityEnvironment","location":"Fuzhou","thumbnailSrc":"assets/thumbnails/photo-074.webp","displaySrc":"assets/display/photo-074.webp","originalSrc":"assets/display/photo-074.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-075","title":"Frame 74","category":"ProductStill","location":"","thumbnailSrc":"assets/thumbnails/photo-075.webp","displaySrc":"assets/display/photo-075.webp","originalSrc":"assets/display/photo-075.webp","width":1445,"height":1088,"orientation":"landscape"},{"id":"photo-076","title":"Frame 75","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-076.webp","displaySrc":"assets/display/photo-076.webp","originalSrc":"assets/display/photo-076.webp","width":1672,"height":941,"orientation":"landscape"},{"id":"photo-077","title":"Frame 76","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-077.webp","displaySrc":"assets/display/photo-077.webp","originalSrc":"assets/display/photo-077.webp","width":1254,"height":1254,"orientation":"landscape"},{"id":"photo-078","title":"Frame 77","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-078.webp","displaySrc":"assets/display/photo-078.webp","originalSrc":"assets/display/photo-078.webp","width":1023,"height":1537,"orientation":"portrait"},{"id":"photo-079","title":"Frame 78","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-079.webp","displaySrc":"assets/display/photo-079.webp","originalSrc":"assets/display/photo-079.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-080","title":"Frame 79","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-080.webp","displaySrc":"assets/display/photo-080.webp","originalSrc":"assets/display/photo-080.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-081","title":"Frame 80","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-081.webp","displaySrc":"assets/display/photo-081.webp","originalSrc":"assets/display/photo-081.webp","width":1535,"height":1024,"orientation":"landscape"},{"id":"photo-082","title":"Frame 81","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-082.webp","displaySrc":"assets/display/photo-082.webp","originalSrc":"assets/display/photo-082.webp","width":4096,"height":2681,"orientation":"landscape"},{"id":"photo-083","title":"Frame 82","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-083.webp","displaySrc":"assets/display/photo-083.webp","originalSrc":"assets/display/photo-083.webp","width":3265,"height":2177,"orientation":"landscape"},{"id":"photo-084","title":"Frame 83","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-084.webp","displaySrc":"assets/display/photo-084.webp","originalSrc":"assets/display/photo-084.webp","width":1536,"height":1024,"orientation":"landscape"},{"id":"photo-085","title":"Frame 84","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-085.webp","displaySrc":"assets/display/photo-085.webp","originalSrc":"assets/display/photo-085.webp","width":1024,"height":1536,"orientation":"portrait"},{"id":"photo-086","title":"Frame 85","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-086.webp","displaySrc":"assets/display/photo-086.webp","originalSrc":"assets/display/photo-086.webp","width":1448,"height":1086,"orientation":"landscape"},{"id":"photo-087","title":"Frame 86","category":"PortraitImage","location":"","thumbnailSrc":"assets/thumbnails/photo-087.webp","displaySrc":"assets/display/photo-087.webp","originalSrc":"assets/display/photo-087.webp","width":1023,"height":1537,"orientation":"portrait"}];
+
+const directionItems = [
+  {
+    "id": "photo-16",
+    "category": "BrandScene",
+    "label": "Brand",
+    "zhTitle": "品牌内容",
+    "zhText": "适合公司宣传、官网素材、品牌资料和来德国期间需要直接发布的内容。重点是让画面服务传播，而不只是好看。",
+    "enTitle": "Brand content",
+    "enText": "For company promotion, websites, brand materials and content that needs to be published during a Germany trip.",
+    "deTitle": "Markencontent",
+    "deText": "Für Unternehmenskommunikation, Websites, Markenmaterial und Inhalte, die während eines Deutschlandaufenthalts direkt nutzbar sein sollen."
+  },
+  {
+    "id": "photo-60",
+    "category": "BrandScene",
+    "label": "On-site",
+    "zhTitle": "现场记录",
+    "zhText": "展会、会议、论坛、发布会、沙龙和公司活动都放在这一类。核心是记录现场发生了什么，以及后续宣传能用的瞬间。",
+    "enTitle": "On-site documentation",
+    "enText": "Exhibitions, meetings, forums, launches, salons and company events belong here: what happened on site, and what can be used afterwards.",
+    "deTitle": "Dokumentation vor Ort",
+    "deText": "Messen, Meetings, Foren, Launches, Salons und Firmenveranstaltungen gehören hier zusammen: was vor Ort passiert und was später nutzbar ist."
+  },
+  {
+    "id": "photo-17",
+    "category": "ProductStill",
+    "label": "Product / People",
+    "zhTitle": "产品与人物",
+    "zhText": "适合产品静物、美食、细节、个人形象照和团队形象。相比现场记录，这类拍摄更可控，也更适合做稳定的视觉素材。",
+    "enTitle": "Product and people",
+    "enText": "For product still life, food, details, portraits and team profiles. More controlled than live documentation, and useful as stable visual assets.",
+    "deTitle": "Produkt und Menschen",
+    "deText": "Für Produktstillleben, Food, Details, Porträts und Teamprofile. Kontrollierter als Live-Dokumentation und gut als stabiles Bildmaterial nutzbar."
+  }
+];
+const orbitItems = [
+  {id:"photo-23"},
+  {id:"photo-47"},
+  {id:"photo-24"},
+  {id:"photo-35"},
+  {id:"photo-18"},
+  {id:"photo-49"},
+  {id:"photo-03"},
+  {id:"photo-42"},
+  {id:"photo-19"},
+  {id:"photo-54"}
+];
+
+const translations = {
+  zh: {
+    navWork:"方向", navServices:"流程", navGallery:"作品", navBook:"预约",
+    eyebrow:"赵峻迎 / Kevin · Berlin / Shanghai",
+    heroText:"在德国本地为中国公司提供展会、活动、商业与产品拍摄，也可配合完成短视频内容交付。主要服务柏林、上海，德国其他城市可沟通。",
+    heroCta:"联系拍摄", heroSecondary:"查看作品", statPhotos:"精选照片", statDirections:"拍摄方向", statCities:"德国本地可沟通",
+    scrollNote:"Scroll for shooting directions",
+    workTitle:"按拍摄需求看作品", workText:"前面三类是主要接单方向：品牌内容、现场记录、产品与人物。作品墙再按看图习惯分成四类，方便快速筛选。",
+    servicesTitle:"拍摄前后怎么配合", servicesText:"来德国参展、开会或做品牌内容，通常需要先确认用途、现场重点和交付格式。流程清楚，后面宣传和复盘会更顺。",
+    processBrief:"确认用途", processBriefText:"先确认展会或活动的时间、地点、重点人物、拍摄用途和交付格式。需要短视频素材也可以提前说明。",
+    processShoot:"现场拍摄", processShootText:"现场优先记录展台、产品、交流、演讲和关键人物，同时保留可用于短视频剪辑的氛围画面。",
+    processDelivery:"精选交付", processDeliveryText:"完成照片筛选、基础整理和统一调色后交付。短视频素材或成片可按项目需求另外整理。",
+    archiveTitle:"更多作品", directionLink:"查看这一类作品", filterAll:"全部", archiveText:"这里是更多作品，用来快速查看整体审美、色彩和不同场景的处理方式。后续新增作品会继续放到这里。",
+    aboutTitle:"在德国本地拍摄，服务中国公司参展与活动", aboutLead:"我是赵峻迎，英文名 Kevin，目前在柏林工业大学攻读硕士，主要在德国和上海接拍摄。从接触摄影到现在已有 13 年，熟悉现场记录、城市环境和商业内容拍摄。",
+    aboutText:"现在主要服务来德国参展、办活动或需要本地内容拍摄的中国公司。可提供商业摄影、产品拍摄、展会和活动记录，也可以配合交付短视频内容，用于官网、社交媒体、宣传材料和活动回顾。",
+    contactTitle:"需要拍摄可以联系我", contactWechat:"微信：扫码添加", contactWechatCaption:"Kevin / 微信二维码", contactArea:"德国本地为主，柏林、上海可直接沟通", lightboxHint:"ESC 关闭 / 方向键切换"
+  },
+  en: {
+    navWork:"Directions", navServices:"Process", navGallery:"Gallery", navBook:"Book",
+    eyebrow:"Zhao Junying / Kevin · Berlin / Shanghai",
+    heroText:"Berlin-based photography and short-form video support for Chinese companies coming to Germany for exhibitions, events, commercial content and product shoots. Mainly Berlin and Shanghai, with other German cities by arrangement.",
+    heroCta:"Book a shoot", heroSecondary:"View work", statPhotos:"selected photos", statDirections:"shooting directions", statCities:"Germany by arrangement",
+    scrollNote:"Scroll for shooting directions",
+    workTitle:"Work by shooting needs", workText:"The three main directions are brand content, on-site documentation, and product/people shoots. The gallery below is grouped for easier visual browsing.",
+    servicesTitle:"How a shoot usually works", servicesText:"For exhibitions, meetings or brand content in Germany, usage, key moments and delivery format should be clear first. A clear process makes the material easier to use afterwards.",
+    processBrief:"Clarify the use", processBriefText:"We first confirm the event time, location, key people, usage, reference style and delivery format. Short-video needs can be discussed before the shoot.",
+    processShoot:"Shoot on location", processShootText:"On site, I cover the booth, products, conversations, talks and key people, while also capturing atmosphere shots that can support short video editing.",
+    processDelivery:"Select and deliver", processDeliveryText:"Selected photos are organized, edited and delivered with a consistent look. Short-video material or finished clips can be prepared depending on the project.",
+    archiveTitle:"More work", directionLink:"View this category", filterAll:"All", archiveText:"A wider selection of work for quickly reading the visual style, color approach and handling of different scenes. New work can be added here over time.",
+    aboutTitle:"Local support in Germany for Chinese companies, exhibitions and events", aboutLead:"I am Zhao Junying, also known as Kevin, currently pursuing a master's degree at TU Berlin. I mainly take projects in Germany and Shanghai, with 13 years of photography experience across real locations, city scenes and commercial content.",
+    aboutText:"I mainly support Chinese companies coming to Germany for exhibitions, events or local content production. I offer commercial photography, product shoots, exhibition and event coverage, and short-form video delivery for websites, social media, marketing materials and event recaps.",
+    contactTitle:"Get in touch for a shoot", contactWechat:"WeChat: scan to add", contactWechatCaption:"Kevin / WeChat QR", contactArea:"Germany-based, with Berlin and Shanghai available directly", lightboxHint:"ESC to close / Arrow keys to switch"
+  },
+  de: {
+    navWork:"Leistungen", navServices:"Ablauf", navGallery:"Portfolio", navBook:"Anfragen",
+    eyebrow:"Zhao Junying / Kevin · Berlin / Shanghai",
+    heroText:"Fotografie und kurze Videoformate in Deutschland für chinesische Unternehmen, die Messen, Events, kommerzielle Inhalte oder Produktaufnahmen planen. Vor allem Berlin und Shanghai, weitere deutsche Städte nach Absprache.",
+    heroCta:"Anfrage senden", heroSecondary:"Portfolio ansehen", statPhotos:"ausgewählte Fotos", statDirections:"Bereiche", statCities:"Deutschland nach Absprache",
+    scrollNote:"Scroll for shooting directions",
+    workTitle:"Arbeiten nach Bedarf", workText:"Die drei Hauptbereiche sind Markencontent, Dokumentation vor Ort sowie Produkt- und People-Shootings. Die Galerie unten ist fürs schnellere Durchsehen gruppiert.",
+    servicesTitle:"So läuft ein Shooting ab", servicesText:"Für Messen, Meetings oder Markencontent in Deutschland sollten Nutzung, Schwerpunkte und Lieferformat zuerst klar sein. So lässt sich das Material später besser einsetzen.",
+    processBrief:"Nutzung klären", processBriefText:"Zuerst klären wir Zeit, Ort, wichtige Personen, Verwendungszweck, Referenzen und Lieferformat. Bedarf an Kurzvideo-Material kann vorab besprochen werden.",
+    processShoot:"Vor Ort fotografieren", processShootText:"Vor Ort dokumentiere ich Stand, Produkte, Gespräche, Vorträge und wichtige Personen und nehme zusätzlich Atmosphäre für mögliche Kurzvideos auf.",
+    processDelivery:"Auswahl liefern", processDeliveryText:"Ausgewählte Fotos werden sortiert, bearbeitet und mit einheitlichem Look geliefert. Kurzvideo-Material oder fertige Clips können je nach Projekt vorbereitet werden.",
+    archiveTitle:"Weitere Arbeiten", directionLink:"Diese Kategorie ansehen", filterAll:"Alle", archiveText:"Eine größere Auswahl, um Stil, Farbgefühl und den Umgang mit unterschiedlichen Situationen schnell zu sehen. Neue Arbeiten können später hier ergänzt werden.",
+    aboutTitle:"Lokale Unterstützung in Deutschland für chinesische Unternehmen, Messen und Events", aboutLead:"Ich bin Zhao Junying, auch Kevin, studiere derzeit im Master an der TU Berlin und übernehme vor allem Projekte in Deutschland und Shanghai. Seit 13 Jahren beschäftige ich mich mit Fotografie, realen Orten, Stadtbildern und kommerziellen Inhalten.",
+    aboutText:"Ich unterstütze vor allem chinesische Unternehmen, die für Messen, Events oder lokale Content-Produktion nach Deutschland kommen. Angeboten werden kommerzielle Fotografie, Produktaufnahmen, Messe- und Eventdokumentation sowie kurze Videoformate für Website, Social Media, Marketingmaterial und Rückblicke.",
+    contactTitle:"Kontakt für ein Shooting", contactWechat:"WeChat: QR-Code scannen", contactWechatCaption:"Kevin / WeChat QR", contactArea:"In Deutschland vor Ort, Berlin und Shanghai direkt möglich", lightboxHint:"ESC schließen / Pfeiltasten wechseln"
+  }
+};
+
+const byId = new Map(PHOTO_DATA.map(photo => [photo.id, photo]));
+const categoryLabels = {
+  "zh": {
+    "BrandScene": "品牌/现场",
+    "ProductStill": "产品静物",
+    "PortraitImage": "人像",
+    "CityEnvironment": "城市环境"
+  },
+  "en": {
+    "BrandScene": "Brand / On-site",
+    "ProductStill": "Product / Still Life",
+    "PortraitImage": "Portrait",
+    "CityEnvironment": "City / Environment"
+  },
+  "de": {
+    "BrandScene": "Marke / Vor Ort",
+    "ProductStill": "Produkt / Still Life",
+    "PortraitImage": "Porträt",
+    "CityEnvironment": "Stadt / Umgebung"
+  }
+};
+const locationLabels = {
+  "zh": {
+    "Ingolstadt": "英戈尔施塔特",
+    "Bremen": "不来梅",
+    "Landshut": "兰茨胡特",
+    "Fuzhou": "福州",
+    "Dessau": "德绍",
+    "Harbin": "哈尔滨",
+    "Behind the Scenes": "幕后花絮",
+    "Beijing": "北京",
+    "Taizhou": "台州",
+    "Munich": "慕尼黑",
+    "Product Studio": "产品静物",
+    "Product Detail": "产品细节",
+    "Berlin": "柏林",
+    "Hamburg": "汉堡",
+    "Potsdamer Platz": "波茨坦广场",
+    "Winter Cabin": "雪景",
+    "Portrait": "肖像",
+    "Portrait Session": "肖像",
+    "Natural Light": "自然光",
+    "Food Studio": "美食静物",
+    "Stage": "舞台现场",
+    "Tibet": "西藏",
+    "Shanghai": "上海",
+    "Conference": "会议现场"
+  },
+  "en": {
+    "Shanghai": "Shanghai",
+    "Conference": "Conference",
+    "Portrait": "Portrait",
+    "Portrait Session": "Portrait",
+    "Product Studio": "Product still life",
+    "Product Detail": "Product detail",
+    "Food Studio": "Food still life",
+    "Natural Light": "Natural light",
+    "Behind the Scenes": "Behind the scenes",
+    "Stage": "Stage",
+    "Tibet": "Tibet",
+    "Fuzhou": "Fuzhou",
+    "Dessau": "Dessau"
+  },
+  "de": {
+    "Behind the Scenes": "Behind the Scenes",
+    "Beijing": "Peking",
+    "Product Studio": "Produktstillleben",
+    "Product Detail": "Produktdetail",
+    "Potsdamer Platz": "Potsdamer Platz",
+    "Winter Cabin": "Winterlandschaft",
+    "Portrait": "Porträt",
+    "Portrait Session": "Porträt",
+    "Natural Light": "Natürliches Licht",
+    "Food Studio": "Food Still Life",
+    "Stage": "Bühne",
+    "Tibet": "Tibet",
+    "Fuzhou": "Fuzhou",
+    "Dessau": "Dessau",
+    "Shanghai": "Shanghai",
+    "Conference": "Konferenz"
+  }
+};
+let currentLang = localStorage.getItem("portfolioLang") || "zh";
+let currentIndex = 0;
+let preloaded = [];
+let touchStartX = 0;
+let orbitAngle = 0;
+let orbitDragScale = .14;
+let orbitHovered = false;
+let orbitDragging = false;
+let orbitDragStartX = 0;
+let orbitDragStartAngle = 0;
+let orbitLastTime = 0;
+let orbitMoved = false;
+let orbitPointerId = null;
+let orbitPointerDownIndex = null;
+let orbitDragSession = 0;
+let orbitClickSuppressUntil = 0;
+
+function setLanguage(lang){
+  currentLang = lang;
+  localStorage.setItem("portfolioLang", lang);
+  document.documentElement.lang = lang === "zh" ? "zh-CN" : lang;
+  document.querySelectorAll("[data-i18n]").forEach(node => {
+    const key = node.dataset.i18n;
+    if (translations[lang][key]) node.textContent = translations[lang][key];
+  });
+  renderDirections();
+  renderArchive();
+  document.querySelectorAll("[data-lang]").forEach(button => {
+    button.classList.toggle("active", button.dataset.lang === lang);
+    button.setAttribute("aria-pressed", button.dataset.lang === lang ? "true" : "false");
+  });
+}
+
+function localizedCategory(photo){
+  return categoryLabels[currentLang]?.[photo.category] || photo.category;
+}
+
+function localizedLocation(photo){
+  if (!photo.location) return "";
+  return locationLabels[currentLang]?.[photo.location] || photo.location;
+}
+
+function figureButton(photo, imageSrc, index, loading = "lazy"){
+  const place = localizedLocation(photo);
+  const alt = place ? `${photo.title} - ${place}` : photo.title;
+  return `
+    <button type="button" data-index="${index}" aria-label="Open ${photo.title}">
+      <span class="photo-mat">
+        <img src="${imageSrc}" width="${photo.width}" height="${photo.height}" alt="${alt}" loading="${loading}" decoding="async">
+        <small>${photo.title}</small>
+      </span>
+    </button>
+  `;
+}
+
+function renderPhotos(){
+  const orbit = document.getElementById("orbit");
+  orbit.innerHTML = orbitItems.map((item, i) => {
+    const photo = byId.get(item.id);
+    const index = PHOTO_DATA.indexOf(photo);
+    const angle = (360 / orbitItems.length) * i;
+    return `<article class="orbit-card ${photo.orientation}" style="--angle:${angle}deg">${figureButton(photo, photo.displaySrc, index, i < 3 ? "eager" : "lazy")}</article>`;
+  }).join("");
+
+  renderDirections();
+
+  renderArchive();
+
+  document.getElementById("aboutMedia").innerHTML = `
+    <figure class="profile-photo">
+      <span class="photo-mat">
+        <img src="assets/display/profile-selfie.webp" width="6000" height="4000" alt="赵峻迎 / Kevin portrait" loading="lazy" decoding="async">
+      </span>
+    </figure>
+  `;
+}
+
+function renderArchive(){
+  const archiveGrid = document.getElementById("archiveGrid");
+  if (!archiveGrid) return;
+  archiveGrid.innerHTML = PHOTO_DATA.map((photo, index) => {
+    const place = localizedLocation(photo);
+    return `
+      <figure class="archive-item" data-category="${photo.category}">
+        ${figureButton(photo, photo.thumbnailSrc, index)}
+        ${place ? `<figcaption><span>${place}</span></figcaption>` : ""}
+      </figure>
+    `;
+  }).join("");
+  applyArchiveFilter("All", false);
+}
+
+function archiveFilterItems(){
+  return ["All", "BrandScene", "ProductStill", "PortraitImage", "CityEnvironment"].map(id => ({
+    id,
+    categories: id === "All" ? null : [id],
+    label: id === "All" ? translations[currentLang].filterAll : (categoryLabels[currentLang][id] || id)
+  }));
+}
+
+function filterIdForCategory(category){
+  if (["BrandScene", "ProductStill", "PortraitImage", "CityEnvironment"].includes(category)) return category;
+  return "All";
+}
+
+function renderArchiveFilter(active = "All"){
+  const filter = document.getElementById("archiveFilter");
+  if (!filter) return;
+  filter.innerHTML = archiveFilterItems().map(item => `
+    <button type="button" data-archive-filter="${item.id}" class="${item.id === active ? "active" : ""}">${item.label}</button>
+  `).join("");
+}
+
+function applyArchiveFilter(filterId = "All", shouldScroll = false){
+  const grid = document.getElementById("archiveGrid");
+  if (!grid) return;
+  const item = archiveFilterItems().find(value => value.id === filterId) || archiveFilterItems()[0];
+  const categories = item.categories;
+  grid.classList.toggle("filtered", Boolean(categories));
+  grid.querySelectorAll(".archive-item").forEach(node => {
+    node.hidden = Boolean(categories) && !categories.includes(node.dataset.category);
+  });
+  renderArchiveFilter(item.id);
+  if (shouldScroll) document.getElementById("archive")?.scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+function renderDirections(){
+  const directionGrid = document.getElementById("directionGrid");
+  if (!directionGrid) return;
+  directionGrid.innerHTML = directionItems.map((item, i) => {
+    const photo = byId.get(item.id);
+    const index = PHOTO_DATA.indexOf(photo);
+    const title = item[`${currentLang}Title`] || item.enTitle;
+    const text = item[`${currentLang}Text`] || item.enText;
+    const place = localizedLocation(photo);
+    return `
+      <article class="direction-card" data-category="${photo.category}">
+        <figure>
+          ${figureButton(photo, photo.displaySrc, index, i < 2 ? "eager" : "lazy")}
+          <figcaption><span>${item.label}</span>${place ? `<span>${place}</span>` : ""}</figcaption>
+        </figure>
+        <div class="direction-copy">
+          <span>${item.label}</span>
+          <h3>${title}</h3>
+          <p>${text}</p>
+          <button class="direction-link" type="button" data-filter-category="${filterIdForCategory(photo.category)}">${translations[currentLang].directionLink}</button>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function sizeLightboxImage(photo = PHOTO_DATA[currentIndex]){
+  const wrap = document.getElementById("lightboxBackdrop");
+  const image = document.getElementById("lightboxImage");
+  if (!wrap || !image || !photo) return;
+  const maxWidth = wrap.clientWidth;
+  const maxHeight = wrap.clientHeight;
+  if (!maxWidth || !maxHeight) {
+    requestAnimationFrame(() => sizeLightboxImage(photo));
+    return;
+  }
+  const scale = Math.min(maxWidth / photo.width, maxHeight / photo.height);
+  image.style.width = `${Math.floor(photo.width * scale)}px`;
+  image.style.height = `${Math.floor(photo.height * scale)}px`;
+}
+
+function preloadNeighbors(index){
+  preloaded = [];
+  [index - 1, index + 1].forEach(value => {
+    const photo = PHOTO_DATA[(value + PHOTO_DATA.length) % PHOTO_DATA.length];
+    const image = new Image();
+    image.src = photo.originalSrc;
+    preloaded.push(image);
+  });
+}
+
+function openLightbox(index){
+  currentIndex = index;
+  const photo = PHOTO_DATA[currentIndex];
+  const image = document.getElementById("lightboxImage");
+  image.src = photo.originalSrc;
+  const place = localizedLocation(photo);
+  image.alt = place ? `${photo.title} - ${place}` : photo.title;
+  document.getElementById("lightboxTitle").textContent = photo.title;
+  document.getElementById("lightboxMeta").textContent = [localizedCategory(photo), place].filter(Boolean).join(" / ");
+  document.getElementById("lightboxCount").textContent = `${currentIndex + 1} / ${PHOTO_DATA.length}`;
+  document.getElementById("lightbox").classList.add("open");
+  document.body.classList.add("lightbox-lock");
+  sizeLightboxImage(photo);
+  if (image.decode) image.decode().then(() => sizeLightboxImage(photo)).catch(() => {});
+  preloadNeighbors(currentIndex);
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").classList.remove("open");
+  document.body.classList.remove("lightbox-lock");
+  const image = document.getElementById("lightboxImage");
+  image.removeAttribute("src");
+  image.removeAttribute("alt");
+  image.removeAttribute("style");
+  preloaded = [];
+}
+
+function showRelative(step){
+  if (!document.getElementById("lightbox").classList.contains("open")) return;
+  openLightbox((currentIndex + step + PHOTO_DATA.length) % PHOTO_DATA.length);
+}
+
+document.querySelectorAll("[data-lang]").forEach(button => {
+  button.addEventListener("click", () => setLanguage(button.dataset.lang));
+});
+document.addEventListener("click", event => {
+  const directionLink = event.target.closest("[data-filter-category]");
+  if (directionLink) {
+    applyArchiveFilter(directionLink.dataset.filterCategory, true);
+    return;
+  }
+  const archiveFilter = event.target.closest("[data-archive-filter]");
+  if (archiveFilter) {
+    applyArchiveFilter(archiveFilter.dataset.archiveFilter, false);
+    return;
+  }
+  const fromOrbit = Boolean(event.target.closest("#orbit"));
+  if (fromOrbit && performance.now() < orbitClickSuppressUntil) {
+    event.preventDefault();
+    return;
+  }
+  const button = event.target.closest("[data-index]");
+  if (button && !orbitMoved) openLightbox(Number(button.dataset.index));
+});
+function updateOrbitTransform(time = performance.now()){
+  const orbit = document.getElementById("orbit");
+  if (!orbit) return;
+  if (!orbitLastTime) orbitLastTime = time;
+  const delta = Math.min(40, time - orbitLastTime);
+  orbitLastTime = time;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!orbitHovered && !orbitDragging && !reducedMotion) orbitAngle -= delta * 0.0085;
+  const wave = time / 1000;
+  const floatY = Math.sin(wave * .72) * 3;
+  const tiltX = -1.2 + Math.sin(wave * .48) * .45;
+  const tiltZ = -1.4 + Math.cos(wave * .42) * .65;
+  orbit.style.transform = `translateY(${floatY}px) rotateX(${tiltX}deg) rotateZ(${tiltZ}deg) rotateY(${orbitAngle}deg)`;
+  requestAnimationFrame(updateOrbitTransform);
+}
+function setupOrbitDrag(){
+  const orbit = document.getElementById("orbit");
+  if (!orbit) return;
+  const finishDrag = event => {
+    if (!orbitDragging) return null;
+    if (event && orbitPointerId !== null && event.pointerId !== undefined && event.pointerId !== orbitPointerId) return null;
+    const openIndex = !orbitMoved && orbitPointerDownIndex !== null ? orbitPointerDownIndex : null;
+    const pointerId = orbitPointerId;
+    orbitDragging = false;
+    orbitPointerId = null;
+    orbitPointerDownIndex = null;
+    orbit.classList.remove("dragging");
+    if (pointerId !== null && orbit.hasPointerCapture && orbit.hasPointerCapture(pointerId)) {
+      try { orbit.releasePointerCapture(pointerId); } catch {}
+    }
+    const session = orbitDragSession;
+    setTimeout(() => {
+      if (session === orbitDragSession) orbitMoved = false;
+    }, 80);
+    return openIndex;
+  };
+  const cancelDrag = event => {
+    if (!orbitDragging) return;
+    if (event && orbitPointerId !== null && event.pointerId !== undefined && event.pointerId !== orbitPointerId) return;
+    orbitDragging = false;
+    orbitMoved = false;
+    orbitPointerId = null;
+    orbitPointerDownIndex = null;
+    orbit.classList.remove("dragging");
+  };
+  orbit.addEventListener("pointerover", event => {
+    if (event.target.closest(".orbit-card")) orbitHovered = true;
+  });
+  orbit.addEventListener("pointerout", event => {
+    const card = event.target.closest(".orbit-card");
+    if (!card) return;
+    const nextCard = event.relatedTarget && event.relatedTarget.closest ? event.relatedTarget.closest(".orbit-card") : null;
+    if (nextCard !== card) orbitHovered = Boolean(nextCard);
+  });
+  orbit.addEventListener("pointerdown", event => {
+    if (event.button !== 0 && event.pointerType === "mouse") return;
+    const button = event.target.closest("[data-index]");
+    if (!button) return;
+    event.preventDefault();
+    orbitDragSession += 1;
+    orbitDragging = true;
+    orbitMoved = false;
+    orbitPointerId = event.pointerId;
+    orbitDragStartX = event.clientX;
+    orbitDragStartAngle = orbitAngle;
+    orbitDragScale = Math.min(.16, 140 / Math.max(720, orbit.clientWidth));
+    orbitPointerDownIndex = button ? Number(button.dataset.index) : null;
+    orbit.classList.add("dragging");
+    if (orbit.setPointerCapture) {
+      try { orbit.setPointerCapture(event.pointerId); } catch {}
+    }
+  });
+  window.addEventListener("pointermove", event => {
+    if (!orbitDragging) return;
+    if (orbitPointerId !== null && event.pointerId !== orbitPointerId) return;
+    if (event.cancelable) event.preventDefault();
+    const delta = event.clientX - orbitDragStartX;
+    if (Math.abs(delta) > 6) orbitMoved = true;
+    orbitAngle = orbitDragStartAngle + delta * orbitDragScale;
+  });
+  window.addEventListener("pointerup", event => {
+    if (!orbitDragging) return;
+    const openIndex = finishDrag(event);
+    if (openIndex !== null) {
+      orbitClickSuppressUntil = performance.now() + 260;
+      openLightbox(openIndex);
+    }
+  });
+  window.addEventListener("pointercancel", cancelDrag);
+  orbit.addEventListener("lostpointercapture", cancelDrag);
+  window.addEventListener("blur", cancelDrag);
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) cancelDrag();
+  });
+  orbit.addEventListener("dragstart", event => event.preventDefault());
+}
+document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+document.getElementById("lightboxPrev").addEventListener("click", () => showRelative(-1));
+document.getElementById("lightboxNext").addEventListener("click", () => showRelative(1));
+document.getElementById("lightboxBackdrop").addEventListener("click", event => {
+  if (event.target.id === "lightboxBackdrop") closeLightbox();
+});
+document.getElementById("lightbox").addEventListener("click", event => {
+  if (event.target.id === "lightbox") closeLightbox();
+});
+document.getElementById("lightbox").addEventListener("touchstart", event => {
+  touchStartX = event.changedTouches[0].clientX;
+}, {passive:true});
+document.getElementById("lightbox").addEventListener("touchend", event => {
+  const delta = event.changedTouches[0].clientX - touchStartX;
+  if (Math.abs(delta) > 44) showRelative(delta > 0 ? -1 : 1);
+}, {passive:true});
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowLeft") showRelative(-1);
+  if (event.key === "ArrowRight") showRelative(1);
+});
+window.addEventListener("resize", () => {
+  if (document.getElementById("lightbox").classList.contains("open")) sizeLightboxImage();
+});
+if (window.visualViewport) {
+  window.visualViewport.addEventListener("resize", () => {
+    if (document.getElementById("lightbox").classList.contains("open")) sizeLightboxImage();
+  });
+}
+
+renderPhotos();
+setupOrbitDrag();
+requestAnimationFrame(updateOrbitTransform);
+setLanguage(currentLang);
+</script>
+</body>
+</html>
+
