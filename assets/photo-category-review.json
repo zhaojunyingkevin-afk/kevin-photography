@@ -1091,7 +1091,7 @@
   {
     "code": "KZ-125",
     "frame": "Frame 122",
-    "category": "其他",
+    "category": "城市环境",
     "photo_id": "photo-125",
     "location": "",
     "original": "assets/originals/photo-125.jpg",
@@ -1118,10 +1118,280 @@
   {
     "code": "KZ-128",
     "frame": "Frame 125",
-    "category": "其他",
+    "category": "城市环境",
     "photo_id": "photo-128",
     "location": "Xi'an",
     "original": "assets/originals/photo-128.png",
     "thumbnail": "assets/thumbnails/photo-128.webp"
+  },
+  {
+    "code": "KZ-129",
+    "frame": "Frame 126",
+    "category": "人像",
+    "photo_id": "photo-129",
+    "location": "",
+    "original": "assets/originals/photo-129.jpg",
+    "thumbnail": "assets/thumbnails/photo-129.webp"
+  },
+  {
+    "code": "KZ-130",
+    "frame": "Frame 127",
+    "category": "城市环境",
+    "photo_id": "photo-130",
+    "location": "Denmark",
+    "original": "assets/originals/photo-130.jpg",
+    "thumbnail": "assets/thumbnails/photo-130.webp"
+  },
+  {
+    "code": "KZ-131",
+    "frame": "Frame 128",
+    "category": "城市环境",
+    "photo_id": "photo-131",
+    "location": "Denmark",
+    "original": "assets/originals/photo-131.png",
+    "thumbnail": "assets/thumbnails/photo-131.webp"
+  },
+  {
+    "code": "KZ-132",
+    "frame": "Frame 129",
+    "category": "城市环境",
+    "photo_id": "photo-132",
+    "location": "Denmark",
+    "original": "assets/originals/photo-132.png",
+    "thumbnail": "assets/thumbnails/photo-132.webp"
+  },
+  {
+    "code": "KZ-133",
+    "frame": "Frame 130",
+    "category": "城市环境",
+    "photo_id": "photo-133",
+    "location": "Denmark",
+    "original": "assets/originals/photo-133.png",
+    "thumbnail": "assets/thumbnails/photo-133.webp"
+  },
+  {
+    "code": "KZ-134",
+    "frame": "Frame 131",
+    "category": "城市环境",
+    "photo_id": "photo-134",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-134.png",
+    "thumbnail": "assets/thumbnails/photo-134.webp"
+  },
+  {
+    "code": "KZ-135",
+    "frame": "Frame 132",
+    "category": "城市环境",
+    "photo_id": "photo-135",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-135.png",
+    "thumbnail": "assets/thumbnails/photo-135.webp"
+  },
+  {
+    "code": "KZ-136",
+    "frame": "Frame 133",
+    "category": "城市环境",
+    "photo_id": "photo-136",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-136.png",
+    "thumbnail": "assets/thumbnails/photo-136.webp"
+  },
+  {
+    "code": "KZ-137",
+    "frame": "Frame 134",
+    "category": "城市环境",
+    "photo_id": "photo-137",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-137.png",
+    "thumbnail": "assets/thumbnails/photo-137.webp"
+  },
+  {
+    "code": "KZ-138",
+    "frame": "Frame 135",
+    "category": "城市环境",
+    "photo_id": "photo-138",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-138.png",
+    "thumbnail": "assets/thumbnails/photo-138.webp"
+  },
+  {
+    "code": "KZ-139",
+    "frame": "Frame 136",
+    "category": "城市环境",
+    "photo_id": "photo-139",
+    "location": "Copenhagen",
+    "original": "assets/originals/photo-139.png",
+    "thumbnail": "assets/thumbnails/photo-139.webp"
+  },
+  {
+    "code": "KZ-140",
+    "frame": "Frame 137",
+    "category": "城市环境",
+    "photo_id": "photo-140",
+    "location": "Rostock",
+    "original": "assets/originals/photo-140.png",
+    "thumbnail": "assets/thumbnails/photo-140.webp"
+  },
+  {
+    "code": "KZ-141",
+    "frame": "Frame 138",
+    "category": "城市环境",
+    "photo_id": "photo-141",
+    "location": "Rostock",
+    "original": "assets/originals/photo-141.png",
+    "thumbnail": "assets/thumbnails/photo-141.webp"
+  },
+  {
+    "code": "KZ-142",
+    "frame": "Frame 139",
+    "category": "城市环境",
+    "photo_id": "photo-142",
+    "location": "Rostock",
+    "original": "assets/originals/photo-142.png",
+    "thumbnail": "assets/thumbnails/photo-142.webp"
+  },
+  {
+    "code": "KZ-143",
+    "frame": "Frame 140",
+    "category": "城市环境",
+    "photo_id": "photo-143",
+    "location": "Rostock",
+    "original": "assets/originals/photo-143.png",
+    "thumbnail": "assets/thumbnails/photo-143.webp"
+  },
+  {
+    "code": "KZ-144",
+    "frame": "Frame 141",
+    "category": "城市环境",
+    "photo_id": "photo-144",
+    "location": "Rostock",
+    "original": "assets/originals/photo-144.png",
+    "thumbnail": "assets/thumbnails/photo-144.webp"
+  },
+  {
+    "code": "KZ-145",
+    "frame": "Frame 142",
+    "category": "城市环境",
+    "photo_id": "photo-145",
+    "location": "Rostock",
+    "original": "assets/originals/photo-145.png",
+    "thumbnail": "assets/thumbnails/photo-145.webp"
+  },
+  {
+    "code": "KZ-146",
+    "frame": "Frame 143",
+    "category": "城市环境",
+    "photo_id": "photo-146",
+    "location": "Rostock",
+    "original": "assets/originals/photo-146.png",
+    "thumbnail": "assets/thumbnails/photo-146.webp"
+  },
+  {
+    "code": "KZ-147",
+    "frame": "Frame 144",
+    "category": "城市环境",
+    "photo_id": "photo-147",
+    "location": "Rostock",
+    "original": "assets/originals/photo-147.png",
+    "thumbnail": "assets/thumbnails/photo-147.webp"
+  },
+  {
+    "code": "KZ-148",
+    "frame": "Frame 145",
+    "category": "城市环境",
+    "photo_id": "photo-148",
+    "location": "Rostock",
+    "original": "assets/originals/photo-148.png",
+    "thumbnail": "assets/thumbnails/photo-148.webp"
+  },
+  {
+    "code": "KZ-149",
+    "frame": "Frame 146",
+    "category": "城市环境",
+    "photo_id": "photo-149",
+    "location": "Rostock",
+    "original": "assets/originals/photo-149.png",
+    "thumbnail": "assets/thumbnails/photo-149.webp"
+  },
+  {
+    "code": "KZ-150",
+    "frame": "Frame 147",
+    "category": "城市环境",
+    "photo_id": "photo-150",
+    "location": "Rostock",
+    "original": "assets/originals/photo-150.png",
+    "thumbnail": "assets/thumbnails/photo-150.webp"
+  },
+  {
+    "code": "KZ-151",
+    "frame": "Frame 148",
+    "category": "城市环境",
+    "photo_id": "photo-151",
+    "location": "Rostock",
+    "original": "assets/originals/photo-151.png",
+    "thumbnail": "assets/thumbnails/photo-151.webp"
+  },
+  {
+    "code": "KZ-152",
+    "frame": "Frame 149",
+    "category": "城市环境",
+    "photo_id": "photo-152",
+    "location": "Rostock",
+    "original": "assets/originals/photo-152.png",
+    "thumbnail": "assets/thumbnails/photo-152.webp"
+  },
+  {
+    "code": "KZ-153",
+    "frame": "Frame 150",
+    "category": "城市环境",
+    "photo_id": "photo-153",
+    "location": "Rostock",
+    "original": "assets/originals/photo-153.png",
+    "thumbnail": "assets/thumbnails/photo-153.webp"
+  },
+  {
+    "code": "KZ-154",
+    "frame": "Frame 151",
+    "category": "城市环境",
+    "photo_id": "photo-154",
+    "location": "Rostock",
+    "original": "assets/originals/photo-154.png",
+    "thumbnail": "assets/thumbnails/photo-154.webp"
+  },
+  {
+    "code": "KZ-155",
+    "frame": "Frame 152",
+    "category": "城市环境",
+    "photo_id": "photo-155",
+    "location": "Rostock",
+    "original": "assets/originals/photo-155.png",
+    "thumbnail": "assets/thumbnails/photo-155.webp"
+  },
+  {
+    "code": "KZ-156",
+    "frame": "Frame 153",
+    "category": "城市环境",
+    "photo_id": "photo-156",
+    "location": "Rostock",
+    "original": "assets/originals/photo-156.png",
+    "thumbnail": "assets/thumbnails/photo-156.webp"
+  },
+  {
+    "code": "KZ-157",
+    "frame": "Frame 154",
+    "category": "城市环境",
+    "photo_id": "photo-157",
+    "location": "Rostock",
+    "original": "assets/originals/photo-157.png",
+    "thumbnail": "assets/thumbnails/photo-157.webp"
+  },
+  {
+    "code": "KZ-158",
+    "frame": "Frame 155",
+    "category": "城市环境",
+    "photo_id": "photo-158",
+    "location": "Rostock",
+    "original": "assets/originals/photo-158.png",
+    "thumbnail": "assets/thumbnails/photo-158.webp"
   }
 ]
